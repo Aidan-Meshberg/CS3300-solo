@@ -1,0 +1,34 @@
+{% extends "system_app/base_template.html"%}
+
+{% block content %}
+<h1> Per Diem details </h1>
+<h2> Title: {{port.title}} </h2>
+
+<p> about: {{port.about}} <br></p>
+<p> contact email: {{port.contact_email}} <br></p>
+<p> Phone number: {{port.phone_number}} <br></p>
+
+
+<a href="{% url 'add_project' %}?button_id={{ port.id }}" class="btn btn-warning">New Day</a>
+<ul class="list-group">
+
+<br>
+
+{%for i in projects%}
+    <li class="list-group-item">
+            <p><strong>Per Siems:{{ i.title }}
+
+                <a href="{% url 'view_day' %}?port_id={{ port.id }}&projects_id={{ i.id }}" class="btn btn-primary">View</a>
+                                                                          
+                <a href="{% url 'update_day' %}?port_id={{ port.id }}&projects_id={{ i.id }}" class="btn btn-success">Update</a>
+
+                <a href="{% url 'delete_day' %}?port_id={{ port.id }}&projects_id={{ i.id }}" class="btn btn-danger">Delete</a>
+                
+            </strong></p>
+    </li>
+{% endfor %}
+
+<br>
+
+<p> <a href="{% url 'index' %}" class="btn btn-secondary">Return to Per Diems</a> </p>
+{% endblock %}

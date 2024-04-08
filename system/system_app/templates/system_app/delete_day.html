@@ -1,0 +1,13 @@
+
+{% extends "system_app/base_template.html" %}
+
+{% block content %}
+
+<h1> Are you sure you want to delete: </h1>
+<h2> {{ project.title }}
+<br>
+
+<a href="{% url 'delete_project_confirm' %}?port={{ port }}&project={{ project.id }}" class="btn btn-primary">Delete</a>
+<a href="{% url 'delete_project_cancel' %}?port={{ port }}&project={{ project.id }}" class="btn btn-primary">Cancel</a>
+
+{%endblock%}

@@ -1,0 +1,13 @@
+{% extends "system_app/base_template.html" %}
+
+{% block content %}
+
+<body>
+    <h2>Update Day</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+</body>
+{%endblock%}

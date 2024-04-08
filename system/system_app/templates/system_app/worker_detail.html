@@ -1,0 +1,13 @@
+{% extends 'system_app/base_template.html' %}
+
+{% block content %}
+
+<h1> Worker: {{ student.name }} </h1>
+
+<p><strong>Name:</strong> {{ student.email }}</p>
+<p><strong>Email:</strong> {{ student.email }}</p>
+<p><strong>Title:</strong> {{ student.title }}</p>
+<p><strong>Days:<a href="port_details?button_id={{ port.id }}">{{ student.portfolio.title }} </a>
+<a href="{% url 'update_port' %}?port_id={{ port.id }}&stud_id={{ student.id }}" class="btn btn-success">Update Port</a></p>
+
+{% endblock %}

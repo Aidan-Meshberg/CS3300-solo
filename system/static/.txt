@@ -1,0 +1,1 @@
+here to make "static" and "images" not merge

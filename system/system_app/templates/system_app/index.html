@@ -1,0 +1,18 @@
+<!-- inherit from base.html-->
+{% extends "system_app/base_template.html" %}
+
+<!-- Replace block content in base_template.html -->
+{% block content %}
+    <h1>People's Per Diems</h1>
+
+    <h2>List of per diems</h2>
+      <ul class="list-group">
+        {%for i in student_active_ports%}
+          <li class="list-group-item">Name {{i.name}}
+            <p><strong>Per Diem:{{ i.portfolio.title }}
+              <a href="{% url 'port_details' %}?button_id={{ i.portfolio_id }}" class="btn btn-primary">View Portfolio</a>
+            </strong></p>
+          </li>
+        {% endfor %}
+      </ul>
+{% endblock %}

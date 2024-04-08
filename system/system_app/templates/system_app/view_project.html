@@ -1,0 +1,19 @@
+{% extends 'portfolio_app/base_template.html' %}
+
+{% block content%}
+    <h1> Per Diem details </h1>
+    <h2> Title: {{ project.title }} </h2>
+
+    <br>
+    <p> Per diem discription </p>
+
+    <ul class="list-group">
+        <li class="list-group-item">
+            {{ project.description }}
+
+        </li>
+    </ul>
+
+    <br>
+    <p> Please use the back button to return </p>
+{% endblock %}
