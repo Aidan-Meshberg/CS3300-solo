@@ -1,15 +1,15 @@
-{% extends 'portfolio_app/base_template.html' %}
+{% extends 'system_app/base_template.html' %}
 
 {% block content%}
-    <h1> Per Diem details </h1>
-    <h2> Title: {{ project.title }} </h2>
+    <h1> Day details </h1>
+    <h2> Title: {{ day.title }} </h2>
 
     <br>
-    <p> Per diem discription </p>
+    <p> Day discription </p>
 
     <ul class="list-group">
         <li class="list-group-item">
-            {{ project.description }}
+            {{ day.description }}
 
         </li>
     </ul>

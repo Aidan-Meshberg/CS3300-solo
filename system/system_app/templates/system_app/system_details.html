@@ -2,27 +2,29 @@
 
 {% block content %}
 <h1> Per Diem details </h1>
-<h2> Title: {{port.title}} </h2>
+<h2> Title: {{diem.title}} </h2>
 
-<p> about: {{port.about}} <br></p>
-<p> contact email: {{port.contact_email}} <br></p>
-<p> Phone number: {{port.phone_number}} <br></p>
+<p> about: {{diem.about}} <br></p>
+<p> contact email: {{diem.contact_email}} <br></p>
+<p> Phone number: {{diem.phone_number}} <br></p>
+
+<img src="{% static 'images/175.jpg' %}">
 
 
-<a href="{% url 'add_project' %}?button_id={{ port.id }}" class="btn btn-warning">New Day</a>
+<a href="{% url 'add_project' %}?button_id={{ diem.id }}" class="btn btn-warning">New Day</a>
 <ul class="list-group">
 
 <br>
 
-{%for i in projects%}
+{%for i in pre_diem%}
     <li class="list-group-item">
-            <p><strong>Per Siems:{{ i.title }}
+            <p><strong>Per Diems:{{ i.title }}
 
-                <a href="{% url 'view_day' %}?port_id={{ port.id }}&projects_id={{ i.id }}" class="btn btn-primary">View</a>
+                <a href="{% url 'view_day' %}?diem_id={{ diem.id }}&per_diem_id={{ i.id }}" class="btn btn-primary">View</a>
                                                                           
-                <a href="{% url 'update_day' %}?port_id={{ port.id }}&projects_id={{ i.id }}" class="btn btn-success">Update</a>
+                <a href="{% url 'update_day' %}?diem_id={{ diem.id }}&per_diem_id={{ i.id }}" class="btn btn-success">Update</a>
 
-                <a href="{% url 'delete_day' %}?port_id={{ port.id }}&projects_id={{ i.id }}" class="btn btn-danger">Delete</a>
+                <a href="{% url 'delete_day' %}?diem_id={{ diem.id }}&per_diem_id={{ i.id }}" class="btn btn-danger">Delete</a>
                 
             </strong></p>
     </li>

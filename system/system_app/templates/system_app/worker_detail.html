@@ -2,12 +2,12 @@
 
 {% block content %}
 
-<h1> Worker: {{ student.name }} </h1>
+<h1> Worker: {{ worker.name }} </h1>
 
-<p><strong>Name:</strong> {{ student.email }}</p>
-<p><strong>Email:</strong> {{ student.email }}</p>
-<p><strong>Title:</strong> {{ student.title }}</p>
-<p><strong>Days:<a href="port_details?button_id={{ port.id }}">{{ student.portfolio.title }} </a>
-<a href="{% url 'update_port' %}?port_id={{ port.id }}&stud_id={{ student.id }}" class="btn btn-success">Update Port</a></p>
+<p><strong>Name:</strong> {{ worker.email }}</p>
+<p><strong>Email:</strong> {{ worker.email }}</p>
+<p><strong>Title:</strong> {{ worker.title }}</p>
+<p><strong>Days:<a href="diem_details?button_id={{ diem.id }}">{{ diem.day.title }} </a>
+<a href="{% url 'update_diem' %}?diem_id={{ diem.id }}&worker_id={{ worker.id }}" class="btn btn-success">Update Per Diem</a></p>
 
 {% endblock %}

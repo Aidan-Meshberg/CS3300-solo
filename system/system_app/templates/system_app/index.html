@@ -7,10 +7,10 @@
 
     <h2>List of per diems</h2>
       <ul class="list-group">
-        {%for i in student_active_ports%}
+        {%for i in Worker%}
           <li class="list-group-item">Name {{i.name}}
-            <p><strong>Per Diem:{{ i.portfolio.title }}
-              <a href="{% url 'port_details' %}?button_id={{ i.portfolio_id }}" class="btn btn-primary">View Portfolio</a>
+            <p><strong>Per Diem:{{ i.worker.title }}
+              <a href="{% url 'diem_details' %}?button_id={{ i.per_diem_id }}" class="btn btn-primary">View Per Diem</a>
             </strong></p>
           </li>
         {% endfor %}

@@ -3,7 +3,7 @@
 {% block content %}
 <h1> Worker List </h1>
 
-{% for i in student%}
+{% for i in worker%}
     <p><a href="/worker_detail?worker_id={{i.id}}">{{i.name}}</a></p>
 {% endfor %}
 
